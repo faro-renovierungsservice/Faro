@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faro Renovierungsservice | Karlsruhe & Umgebung</title>
+  <meta name="description" content="Faro Renovierungsservice in Karlsruhe & Umgebung: Malerarbeiten, Laminat verlegen, Tapezieren, Spachteln, Verputzen und Renovierungsarbeiten. Jetzt kostenlos anfragen." />
+  <meta name="keywords" content="Renovierung Karlsruhe, Maler Karlsruhe, Laminat verlegen Karlsruhe, Tapezieren Karlsruhe, Spachteln Karlsruhe, Renovierungsservice Karlsruhe" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --primary:#2f4f6f;
+      --dark:#1f2933;
+      --light:#f7f8fa;
+      --accent:#d9a441;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--dark);
+      background:var(--white);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(rgba(22,33,44,.72),rgba(22,33,44,.72)),
+      url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80') center/cover;
+      min-height:72vh;
+      display:flex;
+      align-items:center;
+      color:white;
+    }
+    .wrap{width:min(1100px,92%);margin:auto}
+    nav{
+      position:absolute;
+      top:0;left:0;right:0;
+      padding:18px 0;
+      background:rgba(0,0,0,.18);
+    }
+    .nav-inner{
+      width:min(1100px,92%);
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .brand{font-weight:700;font-size:1.25rem}
+    .nav-links a{
+      color:white;text-decoration:none;margin-left:18px;font-size:.95rem
+    }
+    .hero{padding-top:70px;max-width:760px}
+    h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.05;margin:0 0 18px}
+    h2{font-size:2rem;margin-bottom:12px}
+    .hero p{font-size:1.2rem;max-width:680px}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      display:inline-block;
+      padding:13px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+    }
+    .btn-primary{background:var(--accent);color:#111}
+    .btn-secondary{background:white;color:var(--primary)}
+    section{padding:70px 0}
+    .muted{background:var(--light)}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:30px;
+    }
+    .card{
+      background:white;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+    .card h3{margin-top:0;color:var(--primary)}
+    .about{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:35px;
+      align-items:center;
+    }
+    .about img{
+      width:100%;
+      border-radius:14px;
+      min-height:320px;
+      object-fit:cover;
+    }
+    .check{list-style:none;padding:0}
+    .check li{margin:10px 0}
+    .check li:before{content:"✓";color:var(--accent);font-weight:bold;margin-right:10px}
+    .contact-box{
+      background:var(--primary);
+      color:white;
+      border-radius:16px;
+      padding:34px;
+    }
+    .contact-box a{color:white}
+    footer{
+      background:#111820;
+      color:#cfd7df;
+      padding:24px 0;
+      text-align:center;
+      font-size:.9rem;
+    }
+    .note{
+      background:#fff7df;
+      border-left:4px solid var(--accent);
+      padding:12px 16px;
+      margin-top:18px;
+      color:#4a3a12;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+      margin-top:30px;
+    }
+    .gallery-card{
+      background:white;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 8px 28px rgba(0,0,0,.07);
+    }
+    .gallery-card img{
+      width:100%;
+      height:310px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-card .text{
+      padding:18px 20px;
+    }
+    .before-after{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-top:28px;
+    }
+    .ba-card{
+      position:relative;
+      border-radius:14px;
+      overflow:hidden;
+      min-height:340px;
+      background:#ddd;
+    }
+    .ba-card img{
+      width:100%;
+      height:100%;
+      min-height:340px;
+      object-fit:cover;
+      display:block;
+    }
+    .ba-label{
+      position:absolute;
+      top:16px;
+      left:16px;
+      background:rgba(0,0,0,.72);
+      color:white;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      font-weight:700;
+      padding:14px 18px;
+      border-radius:999px;
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+    }
+    .cta-strip{
+      background:var(--primary);
+      color:white;
+      border-radius:16px;
+      padding:28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:800px){
+      .gallery,.before-after{grid-template-columns:1fr}
+      .gallery-card img{height:240px}
+
+      .grid,.about{grid-template-columns:1fr}
+      .nav-links{display:none}
+      header{min-height:82vh}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand"><span style="display:inline-block;background:#d9a441;color:#111;padding:5px 9px;border-radius:6px;margin-right:7px">FARO</span> Renovierungsservice</div>
+      <div class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#arbeiten">Arbeiten</a>
+        <a href="#ueberuns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap hero">
+      <h1>Renovieren. Verschönern. Wohlfühlen.</h1>
+      <p>Zuverlässige Renovierungsarbeiten in Karlsruhe und Umgebung – für Wohnung, Haus und Gewerbe. Sauber, flexibel und zu fairen Preisen.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#kontakt">Kostenlos anfragen</a>
+        <a class="btn btn-secondary" href="https://wa.me/4917624381793">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="leistungen" class="muted">
+    <div class="wrap">
+      <h2>Unsere Leistungen</h2>
+      <p>Alles aus einer Hand für Ihre Renovierung.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Malerarbeiten</h3>
+          <p>Innenwände, Decken und weitere Flächen sauber und professionell streichen.</p>
+        </div>
+        <div class="card">
+          <h3>Tapezieren & Spachteln</h3>
+          <p>Untergrund vorbereiten, spachteln, schleifen und Tapeten fachgerecht anbringen.</p>
+        </div>
+        <div class="card">
+          <h3>Laminat verlegen</h3>
+          <p>Saubere Verlegung von Laminat inklusive Zuschnitt und Abschlussarbeiten.</p>
+        </div>
+        <div class="card">
+          <h3>Verputzen</h3>
+          <p>Wände ausbessern, verputzen und für die weitere Bearbeitung vorbereiten.</p>
+        </div>
+        <div class="card">
+          <h3>Lackierarbeiten</h3>
+          <p>Türen, Zargen und weitere geeignete Flächen sorgfältig lackieren.</p>
+        </div>
+        <div class="card">
+          <h3>Renovierung & Innenausbau</h3>
+          <p>Individuelle Renovierungsarbeiten nach Absprache – schnell und zuverlässig.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="arbeiten">
+    <div class="wrap">
+      <h2>Unsere Arbeiten</h2>
+      <p>Einige Beispiele aus unseren typischen Renovierungsarbeiten.</p>
+      <div class="gallery">
+        <div class="gallery-card">
+          <img src="maler.jpg" alt="Malerarbeiten in Karlsruhe">
+          <div class="text">
+            <h3>Malerarbeiten</h3>
+            <p>Saubere Wand- und Deckenarbeiten für Wohnungen, Häuser und Gewerberäume.</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="laminat.jpg" alt="Laminat verlegen in Karlsruhe">
+          <div class="text">
+            <h3>Laminat verlegen</h3>
+            <p>Sorgfältige Verlegung mit sauberem Zuschnitt und ordentlichen Abschlussarbeiten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="muted" id="vorher-nachher">
+    <div class="wrap">
+      <h2>Vorher / Nachher</h2>
+      <p>So kann eine Renovierung den Raum sichtbar verändern.</p>
+      <div class="before-after">
+        <div class="ba-card">
+          <img src="maler_weiss.jpg" alt="Vorher Renovierung">
+          <div class="ba-label">VORHER</div>
+        </div>
+        <div class="ba-card">
+          <img src="maler.jpg" alt="Nachher Renovierung">
+          <div class="ba-label">NACHHER</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-strip">
+        <div>
+          <h2 style="margin:0 0 8px">Schnell ein Angebot erhalten</h2>
+          <div>Foto vom Projekt per WhatsApp senden – wir melden uns schnellstmöglich.</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/4917624381793?text=Hallo%20Faro%20Renovierungsservice%2C%20ich%20möchte%20ein%20Angebot%20für%20mein%20Projekt.">Angebot per WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueberuns">
+    <div class="wrap about">
+      <div>
+        <h2>Saubere Arbeit. Faire Preise.</h2>
+        <p>Faro Renovierungsservice unterstützt private und gewerbliche Kunden in Karlsruhe und Umgebung bei Renovierungen und Verschönerungsarbeiten.</p>
+        <ul class="check">
+          <li>Zuverlässige Terminabsprachen</li>
+          <li>Saubere und sorgfältige Ausführung</li>
+          <li>Flexible Lösungen</li>
+          <li>Faire und transparente Preise</li>
+          <li>Kostenlose Anfrage</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80" alt="Renovierungsarbeiten">
+    </div>
+  </section>
+
+
+  <section id="karlsruhe">
+    <div class="wrap">
+      <h2>Renovierungsservice in Karlsruhe &amp; Umgebung</h2>
+      <p>Faro Renovierungsservice ist Ihr Ansprechpartner für Renovierungsarbeiten in Karlsruhe und der Umgebung. Wir übernehmen Malerarbeiten, Tapezierarbeiten, Spachtelarbeiten, Verputzen, Lackierarbeiten und das Verlegen von Laminat.</p>
+      <p>Ob einzelne Zimmer, Wohnung, Haus oder Gewerberäume: Wir legen Wert auf saubere Ausführung, zuverlässige Absprachen und faire Preise. Senden Sie uns einfach Fotos Ihres Projekts per WhatsApp und fragen Sie unverbindlich ein Angebot an.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://wa.me/4917624381793?text=Hallo%20Faro%20Renovierungsservice%2C%20ich%20habe%20ein%20Projekt%20in%20Karlsruhe%20oder%20Umgebung%20und%20möchte%20ein%20Angebot.">Projekt anfragen</a>
+        <a class="btn btn-secondary" style="background:#2f4f6f;color:white" href="tel:+4917624381793">0176 24381793</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="muted">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Jetzt unverbindlich anfragen</h2>
+        <p>Schreiben Sie uns per WhatsApp oder rufen Sie uns an. Gerne besprechen wir Ihr Projekt und erstellen Ihnen ein Angebot.</p>
+        <p><strong>Firma:</strong> Faro Renovierungsservice<br>
+        <strong>Telefon:</strong> 0176 24381793<br>
+        <strong>WhatsApp:</strong> 0176 24381793<br>
+        <strong>Einsatzgebiet:</strong> Karlsruhe &amp; Umgebung</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="tel:+4917624381793">Jetzt anrufen</a>
+          <a class="btn btn-secondary" href="https://wa.me/4917624381793">WhatsApp schreiben</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Faro Renovierungsservice · Karlsruhe &amp; Umgebung · <a href="impressum.html" style="color:#cfd7df">Impressum</a> · <a href="datenschutz.html" style="color:#cfd7df">Datenschutz</a></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/4917624381793?text=Hallo%20Faro%20Renovierungsservice%2C%20ich%20möchte%20ein%20Angebot%20anfragen.">
+    WhatsApp Angebot
+  </a>
+
+</body>
+</html>
